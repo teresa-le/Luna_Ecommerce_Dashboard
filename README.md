@@ -3,6 +3,9 @@
 
 This project is done from the perspective of a Chief of Staff for an eCommerce platform called Luna. The CEO has requested us to build to build a dashboard informing them on general stats of their platform. They are looking to use the information to decide which categories to invest in, which ones to monitor, and which ones to divest from. 
 
+## Data Sources
+
+This data is an original dataset from The Commons and can be found in the <a href="https://github.com/teresa-le/luna_ecommerce_dashboard/tree/main/resources">Resources</a> folder. 
 
 ## 🛠 Skills
 Power BI, Data Visualization 
@@ -18,14 +21,14 @@ I performed the following actions prior to creating the dashboard:
 
 I then created a dashboard based on the wireframe mockup, which initially didn't have space for all the KPIs I had listed. I decided to make the dashboard two pages, and I placed the visualizations that displayed detailed drill downs that a SME, such as a Category Manager, may use on the second page. I placed the most important and highest level KPIs at the top. 
 
-For more details, you can view the file Dashboard Design Plan. 
-
-
-
-
-
-
-
+For more details, you can view the file <a href="https://github.com/teresa-le/luna_ecommerce_dashboard/blob/main/Dashboard%20Design%20Plan.xlsx">Dashboard Design Plan</a>. 
 
 ## Results 
-## Results 
+
+To view the dashboard using Power BI, you need to have Power BI installed onto your computer and need to download the file <a href="https://github.com/teresa-le/luna_ecommerce_dashboard/blob/main/Luna%20Performance%20Dashboard.pbix">Luna Performance Dashboard</a>. 
+
+<img src="https://github.com/teresa-le/luna_ecommerce_dashboard/blob/main/resources/Dashboard%20Overview.jpg"> 
+
+<img src="https://github.com/teresa-le/luna_ecommerce_dashboard/blob/main/resources/Dashboard%20Drilldowns.jpg">
+
+Overall, Luna seems to be performing well in 2019 in comparison to 2018 despite only one of data being available in 2019 so far. 
