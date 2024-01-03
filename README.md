@@ -8,7 +8,7 @@ This project is done from the perspective of a Chief of Staff for an eCommerce p
 This data is an original dataset from The Commons and can be found in the <a href="https://github.com/teresa-le/luna_ecommerce_dashboard/tree/main/resources">Resources</a> folder. 
 
 ## 🛠 Skills
-Power BI, Data Visualization 
+Power BI, DAX Queries, Data Visualization 
 
 ## Actions
 
@@ -19,10 +19,9 @@ I performed the following actions prior to creating the dashboard:
 * Defined the KPIs and metrics users are trying to track 
 * Created a wireframe mockup of the dashboard 
 
-I then created a dashboard based on the wireframe mockup, which initially didn't have space for all the KPIs I had listed. I decided to make the dashboard two pages, and I placed the visualizations that displayed detailed drill downs that a SME, such as a Category Manager, may use on the second page. I placed the most important and highest level KPIs at the top. 
-
 For more details on the planning process, you can view the file called <a href="https://github.com/teresa-le/luna_ecommerce_dashboard/blob/main/Dashboard%20Design%20Plan.xlsx">Dashboard Design Plan</a>. 
 
+I then created a dashboard based on the wireframe mockup, which initially didn't have space for all the KPIs I had listed. I decided to make the dashboard two pages, and I placed the visualizations that displayed detailed drill downs that a SME, such as a Category Manager, may use on the second page. I placed the most important and highest level KPIs at the top. To create some of the visualizations, I created DAX queries to obtain the values that I was looking for. 
 
 
 ## Results 
