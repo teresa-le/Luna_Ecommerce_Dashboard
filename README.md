@@ -1,7 +1,7 @@
 
 # Luna E-Commerce Platform Dashboard 
 
-This project is done from the perspective of a Chief of Staff for an eCommerce platform called Luna. The CEO has requested a dashboard informing them on general stats of their platform. They are looking to use the information to decide which categories to invest in, which ones to monitor, and which ones to divest from. 
+This project is done from the perspective of a Chief of Staff for an eCommerce platform called Luna. The CEO has requested a dashboard to provide them on general statistics of their platform. They are also looking to use the information from the dashboard to help them decide which categories to invest in, which ones to monitor, and which ones to divest from. 
 
 ## Data Sources
 
@@ -21,7 +21,9 @@ I performed the following actions prior to creating the dashboard:
 
 I then created a dashboard based on the wireframe mockup, which initially didn't have space for all the KPIs I had listed. I decided to make the dashboard two pages, and I placed the visualizations that displayed detailed drill downs that a SME, such as a Category Manager, may use on the second page. I placed the most important and highest level KPIs at the top. 
 
-For more details, you can view the file <a href="https://github.com/teresa-le/luna_ecommerce_dashboard/blob/main/Dashboard%20Design%20Plan.xlsx">Dashboard Design Plan</a>. 
+For more details on the planning process, you can view the file called <a href="https://github.com/teresa-le/luna_ecommerce_dashboard/blob/main/Dashboard%20Design%20Plan.xlsx">Dashboard Design Plan</a>. 
+
+
 
 ## Results 
 
