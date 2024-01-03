@@ -1,7 +1,7 @@
 
 # Luna E-Commerce Platform Dashboard 
 
-This project is done from the perspective of a Chief of Staff for an eCommerce platform called Luna. The CEO has requested us to build to build a dashboard informing them on general stats of their platform. They are looking to use the information to decide which categories to invest in, which ones to monitor, and which ones to divest from. 
+This project is done from the perspective of a Chief of Staff for an eCommerce platform called Luna. The CEO has requested a dashboard informing them on general stats of their platform. They are looking to use the information to decide which categories to invest in, which ones to monitor, and which ones to divest from. 
 
 ## Data Sources
 
