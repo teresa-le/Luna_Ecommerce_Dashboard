@@ -26,10 +26,13 @@ I then created a dashboard based on the wireframe mockup, which initially didn't
 
 ## Results 
 
-To view the dashboard using Power BI, you need to have Power BI installed onto your computer and need to download the file <a href="https://github.com/teresa-le/luna_ecommerce_dashboard/blob/main/Luna%20Performance%20Dashboard.pbix">Luna Performance Dashboard</a>. 
-
 <img src="https://github.com/teresa-le/luna_ecommerce_dashboard/blob/main/resources/Dashboard%20Overview.jpg"> 
 
 <img src="https://github.com/teresa-le/luna_ecommerce_dashboard/blob/main/resources/Dashboard%20Drilldowns.jpg">
 
-Overall, Luna seems to be performing well in 2019 in comparison to 2018 despite only one of data being available in 2019 so far. 
+Luna sells three types of products: Electronics, furniture and clothing. In 2018 and 2019, electronics and furniture hit their sales targets. More information is needed to understand why clothing missed its sales targets and what can be done to help it meet its sales targets e.g. improved marketing efforts, price optimization, etc. Overall, all product categories are profitable with electronics being the most profitable type of product. Despite this fact, clothing makes up 2/3 of Luna's orders. There is also potential room for growth by investing more to increase the sales of electornics, which appear to be more profitable. In the drilldowns, we can see that the two product subcategories that aren't producing a profit are electronics and tables.   
+
+
+## Usage 
+
+To view the dashboard using Power BI, you need to have Power BI installed onto your computer and need to download the file <a href="https://github.com/teresa-le/luna_ecommerce_dashboard/blob/main/Luna%20Performance%20Dashboard.pbix">Luna Performance Dashboard</a>. 
