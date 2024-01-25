@@ -32,7 +32,7 @@ I then created a dashboard based on the wireframe mockup, which initially didn't
 
 Luna sells three types of products: Electronics, furniture and clothing. In 2018 and 2019, electronics and furniture hit their sales targets. More information is needed to understand why clothing missed its sales targets and what can be done to help it meet its sales targets e.g. improved marketing efforts, price optimization, etc. Overall, all product categories are profitable with electronics being the most profitable type of product. Despite this fact, clothing makes up 2/3 of Luna's orders. 
 
-There is also potential room for growth by investing more to increase the sales of electronics, which appear to be more profitable. In the drilldowns, we can see that the two product subcategories that aren't producing a profit are electronics and tables. 45% or almost half of the sales on tables and chairs did not result in a profit, and the cost of acquisition may be too high given their price point. It may be worthwhile to continue to sell chairs and tables depending on whether it aligns with the strategic goals of the business and generate value long-term or not. 
+There is also potential room for growth by investing more to increase the sales of electronics, which appear to be more profitable. In the drilldowns, we can see that the two product subcategories that aren't producing a profit are electronics and tables. 45% or almost half of the sales on tables and chairs did not result in a profit so the cost of acquisition may be too high given their price points. It may be worthwhile to continue to sell chairs and tables depending on whether it aligns with the strategic goals of the business and can generate value long-term. 
 
 
 ## Usage 
