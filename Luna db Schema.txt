@@ -1,15 +1,15 @@
 Order_Details
 ----
-Order_ID PK VARCHAR(10)
-Amount INT 
+Order_Item_ID INT PK 
+Order_ID TEXT 
 Profit INT
 Quantity INT 
 Category TEXT FK >- Sales_Target.Category
-Sub-Category VARCHAR(20)
+Sub-Category TEXT
 Order_Date date 
-Customer_Name VARCHAR(20)
-US_State VARCHAR(20)
-US_City VARCHAR(20) 
+Customer_Name TEXT
+US_State TEXT
+US_City TEXT 
 
 Sales_Target
 ----
