@@ -8,12 +8,22 @@ This project is done from the perspective of a Chief of Staff for an eCommerce p
 This data is an original dataset from The Commons and can be found in the <a href="https://github.com/teresa-le/luna_ecommerce_dashboard/tree/main/resources">Resources</a> folder. 
 
 ## 🛠 Skills
-Power BI, DAX Queries, Data Visualization 
+Power BI, DAX Queries, Data Visualization, PgAdmin, SQL, Data Modeling, ETL  
 
 ## Actions
+To create the database, I created a schema of the database. Then based on that, I created a logical entity relationship diagram. After I completed planning how the database would be structured, I created the database and tables using PgAdmin and imported the data into the tables. 
+
+<img src= "https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/Logical%20ERD%20Diagram.PNG"> 
+
+There are two tables: 
+* Order_Details
+* Sales_Target
+
+For Order_Details, I created a surrogate primary key called Order_Item_ID because Order_ID is not unique. One person can order multiple items that are part of the same order i.e. have the same Order_ID. 
+
+For Sales_Target, because no one column is sufficient as a primary key, I made two columns the primary key (composite primary key). 
 
 I performed the following actions prior to creating the dashboard: 
-
 * Defined the users and their main objectives
 * Defined the insights users are trying to gain 
 * Defined the KPIs and metrics users are trying to track 
