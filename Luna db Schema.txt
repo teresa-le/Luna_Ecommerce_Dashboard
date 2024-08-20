@@ -1,0 +1,18 @@
+Order_Details
+----
+Order_ID PK VARCHAR(10)
+Amount INT 
+Profit INT
+Quantity INT 
+Category TEXT FK >- Sales_Target.Category
+Sub-Category VARCHAR(20)
+Order_Date date 
+Customer_Name VARCHAR(20)
+US_State VARCHAR(20)
+US_City VARCHAR(20) 
+
+Sales_Target
+----
+Month_Order_Date PK Date
+Category PK TEXT
+Target INT 
