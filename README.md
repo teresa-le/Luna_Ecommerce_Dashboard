@@ -11,6 +11,8 @@ This data is an original dataset from The Commons and can be found in the <a hre
 Power BI, DAX Queries, Data Visualization, PgAdmin, SQL, Data Modeling, ETL  
 
 ## Actions
+
+### Creating a Database & ETL 
 To create the database, I created a schema of the database. Then based on that, I created a logical entity relationship diagram. After I completed planning how the database would be structured, I created the database and tables using PgAdmin and imported the data into the tables. 
 
 <img src= "https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/Logical%20ERD%20Diagram.PNG"> 
@@ -19,10 +21,30 @@ There are two tables:
 * Order_Details
 * Sales_Target
 
-For Order_Details, I created a surrogate primary key called Order_Item_ID because Order_ID is not unique. One person can order multiple items that are part of the same order i.e. have the same Order_ID. 
+For Order_Details, I created a surrogate primary key called Order_Item_ID because Order_ID is not unique. One person can order multiple items that are part of the same order i.e. have the same Order_ID. For Sales_Target, because no one column is sufficient as a primary key, I made two columns the primary key (composite primary key). I edited the original dataset accordingly, created csv files and then loaded the data into the database. 
 
-For Sales_Target, because no one column is sufficient as a primary key, I made two columns the primary key (composite primary key). 
+### SQL Queries
 
+Query: What is the profit margin for each category and sub-category in a given month and year?
+```
+SELECT 
+ 	EXTRACT (MONTH FROM order_date) AS order_month,
+	EXTRACT (YEAR FROM order_date) AS order_year,
+	category, 
+	subcategory, 
+	SUM(profit)/SUM(amount) * 100 AS Profit_Margin
+FROM order_details
+GROUP BY 
+	order_month,
+	order_year, 
+	category, 
+	subcategory
+ORDER BY 
+	order_month,
+	order_year;
+```
+
+### Dashboarding & Data Visualization 
 I performed the following actions prior to creating the dashboard: 
 * Defined the users and their main objectives
 * Defined the insights users are trying to gain 
