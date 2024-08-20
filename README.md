@@ -28,21 +28,24 @@ For Order_Details, I created a surrogate primary key called Order_Item_ID becaus
 Query: What is the profit margin for each category and sub-category in a given month and year?
 ```
 SELECT 
- 	EXTRACT (MONTH FROM order_date) AS order_month,
-	EXTRACT (YEAR FROM order_date) AS order_year,
-	category, 
-	subcategory, 
-	SUM(profit)/SUM(amount) * 100 AS Profit_Margin
+    EXTRACT(MONTH FROM order_date) AS order_month,
+    EXTRACT(YEAR FROM order_date) AS order_year,
+    category, 
+    subcategory, 
+    ROUND((SUM(profit)::decimal / SUM(amount) * 100),2) AS profit_margin
 FROM order_details
 GROUP BY 
-	order_month,
-	order_year, 
-	category, 
-	subcategory
+    order_month,
+    order_year, 
+    category, 
+    subcategory
 ORDER BY 
-	order_month,
-	order_year;
+    order_year,
+    order_month,
+    profit_margin;
 ```
+
+Query: 
 
 ### Dashboarding & Data Visualization 
 I performed the following actions prior to creating the dashboard: 
