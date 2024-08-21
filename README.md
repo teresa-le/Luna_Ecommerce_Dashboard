@@ -8,7 +8,7 @@ This project is done from the perspective of a Chief of Staff for an eCommerce p
 This data is an original dataset from The Commons and can be found in the <a href="https://github.com/teresa-le/luna_ecommerce_dashboard/tree/main/resources">Resources</a> folder. 
 
 ## 🛠 Skills
-Power BI, DAX Queries, Data Visualization, PgAdmin, SQL, Data Modeling, ETL  
+Power BI, DAX Queries, Data Visualization, PgAdmin, SQL, Data Modeling, Python, ETL  
 
 ## Actions
 
