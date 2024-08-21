@@ -63,7 +63,7 @@ WITH sales_summary AS (
 SELECT 
     category,
     Total_Sales,
-    (Total_Sales / SUM(Total_Sales) OVER ()) * 100 as Percentage_of_Total
+    ROUND((Total_Sales / SUM(Total_Sales) OVER ()),2) * 100 as Percentage_of_Total
 FROM 
     sales_summary
 ORDER BY 
