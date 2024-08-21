@@ -45,7 +45,8 @@ ORDER BY
     profit_margin;
 ```
 
-<img src="https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/resources/Results%20Query%201.PNG"> 
+Below is a snapshot of the results: 
+<img src="https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/resources/Results%20Query%201.PNG" height=50%> 
 
 
 Query: What percentage of sales does each category make up? 
@@ -70,7 +71,9 @@ ORDER BY
     Total_Sales DESC;
 ```
 
+Below is a snapshot of the results: 
 <img src="https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/resources/Results%20Query%202.PNG"> 
+
 
 ### Dashboarding & Data Visualization 
 I performed the following actions prior to creating the dashboard: 
