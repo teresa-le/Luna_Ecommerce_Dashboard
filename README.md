@@ -45,7 +45,32 @@ ORDER BY
     profit_margin;
 ```
 
-Query: 
+<img src="https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/resources/Results%20Query%201.PNG"> 
+
+
+Query: What percentage of sales does each category make up? 
+
+```
+WITH sales_summary AS (
+    SELECT 
+        category,
+        SUM(amount) as Total_Sales
+    FROM 
+        order_details
+    GROUP BY 
+        category
+)
+SELECT 
+    category,
+    Total_Sales,
+    (Total_Sales / SUM(Total_Sales) OVER ()) * 100 as Percentage_of_Total
+FROM 
+    sales_summary
+ORDER BY 
+    Total_Sales DESC;
+```
+
+<img src="https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/resources/Results%20Query%202.PNG"> 
 
 ### Dashboarding & Data Visualization 
 I performed the following actions prior to creating the dashboard: 
