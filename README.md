@@ -13,7 +13,9 @@ Power BI, DAX Queries, Data Visualization, PgAdmin, SQL, Data Modeling, ETL
 ## Actions
 
 ### Creating a Database & ETL 
-To create the database, I created a schema of the database. Then based on that, I created a logical entity relationship diagram. After I completed planning how the database would be structured, I created the database and tables using PgAdmin and imported the data into the tables. 
+To create the database, I created a schema of the database. Then based on that, I created a logical entity relationship diagram. After I completed planning how the database would be structured, I created the database and tables using PgAdmin.
+
+To create the csv files, I used python, and I imported the csv files into the tables. 
 
 <img src= "https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/Logical%20ERD%20Diagram.PNG"> 
 
