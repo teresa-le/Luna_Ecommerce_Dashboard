@@ -46,7 +46,7 @@ ORDER BY
 ```
 
 Below is a snapshot of the results: 
-<img src="https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/resources/Results%20Query%201.PNG" height=50%> 
+<img src="https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/resources/Results%20Query%201.PNG"> 
 
 
 Query: What percentage of sales does each category make up? 
@@ -71,7 +71,7 @@ ORDER BY
     Total_Sales DESC;
 ```
 
-Below is a snapshot of the results: 
+Below is a snapshot of the results: <br> 
 <img src="https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/resources/Results%20Query%202.PNG"> 
 
 
