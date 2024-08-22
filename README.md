@@ -27,7 +27,7 @@ For Order_Details, I created a surrogate primary key called Order_Item_ID becaus
 
 ### SQL Queries
 
-Query: What is the profit margin for each category and sub-category in a given month and year?
+#### Query: What is the profit margin for each category and sub-category in a given month and year?
 ```
 SELECT 
     EXTRACT(MONTH FROM order_date) AS order_month,
@@ -48,10 +48,11 @@ ORDER BY
 ```
 
 Below is a snapshot of the results: 
+
 <img src="https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/resources/Results%20Query%201.PNG"> 
 
 
-Query: What percentage of sales does each category make up? 
+#### Query: What percentage of sales does each category make up? 
 
 ```
 WITH sales_summary AS (
@@ -74,10 +75,11 @@ ORDER BY
 ```
 
 Clothing makes up the largest percentage of sales, and furniture makes up the smallest. 
+
 <img src="https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/resources/Results%20Query%202.PNG"> 
 
 
-Query: Which months and categories met the target, and which ones didn't?
+#### Query: Which months and categories met the target, and which ones didn't?
 
 ```
 
@@ -130,7 +132,7 @@ ORDER BY
 
 <img src="https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/resources/Results%20Query%203.PNG"> 
 
-Query: How months met the target? 
+#### Query: How months met the target? 
 
 ```
 WITH sales_summary AS (
@@ -191,6 +193,7 @@ GROUP BY
 ``` 
 
 0 of the categories met the monthly sales targets. 
+
 <img src="https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/resources/Results%20Query%204.PNG">
 
 ### Dashboarding & Data Visualization 
