@@ -103,7 +103,7 @@ sales_target AS (
 SELECT 
     ss.category,
     ss.order_date, 
-    ss.total_sales AS total_sales_category_date,
+    SUM(ss.total_sales) AS total_sales_category_date,
     st.month_order_date,
     st.target, 
     CASE 
@@ -115,11 +115,80 @@ FROM
 LEFT JOIN 
     sales_target st ON ss.category = st.category 
     AND ss.order_date = st.month_order_date
+GROUP BY 
+	ss.category, 
+	ss.order_date, 
+	st.month_order_date,
+	st.target,
+	target_met
 ORDER BY 
     ss.category,
-    ss.order_date;
+    ss.order_date,
+	st.target;
 
 ```
+
+Query: How months met the target? 
+
+```
+WITH sales_summary AS (
+    SELECT 
+        category,
+        TO_CHAR(order_date, 'MM-YYYY') AS order_date,
+        SUM(amount) AS total_sales
+    FROM 
+        order_details
+    GROUP BY 
+        category, 
+        order_date
+), 
+sales_target AS (
+    SELECT 
+        category,
+        TO_CHAR(month_order_date, 'MM-YYYY') AS month_order_date,
+        target
+    FROM 
+        sales_target
+), 
+monthly_target_comparison AS 
+	(SELECT 
+		ss.category,
+		ss.order_date, 
+		SUM(ss.total_sales) AS total_sales_category_date,
+		st.month_order_date,
+		st.target, 
+		CASE 
+			WHEN ss.total_sales >= st.target THEN 'Yes'
+			ELSE 'No'
+		END AS target_met
+	FROM 
+		sales_summary ss
+	LEFT JOIN 
+		sales_target st ON ss.category = st.category 
+		AND ss.order_date = st.month_order_date
+	GROUP BY 
+		ss.category, 
+		ss.order_date, 
+		st.month_order_date,
+		st.target,
+		target_met
+	ORDER BY 
+		ss.category,
+		ss.order_date,
+		st.target)
+SELECT 
+    category, 
+    COUNT(*) AS total_months,
+    SUM(CASE WHEN target_met = 'Yes' THEN 1 ELSE 0 END) AS months_target_met, 
+    ROUND(SUM(CASE WHEN target_met = 'Yes' THEN 1 ELSE 0 END)::numeric / COUNT(*)::numeric * 100, 2) AS percentage_months_met
+FROM 
+    monthly_target_comparison
+GROUP BY 
+    category;
+
+``` 
+
+0 of the categories met the monthly sales targets. 
 
 ### Dashboarding & Data Visualization 
 I performed the following actions prior to creating the dashboard: 
