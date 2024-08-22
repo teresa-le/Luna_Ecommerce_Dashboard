@@ -77,6 +77,50 @@ Below is a snapshot of the results: <br>
 <img src="https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/resources/Results%20Query%202.PNG"> 
 
 
+Query: Which months and categories met the target, and which ones didn't?
+
+```
+
+WITH sales_summary AS (
+    SELECT 
+        category,
+        TO_CHAR(order_date, 'MM-YYYY') AS order_date,
+        SUM(amount) AS total_sales
+    FROM 
+        order_details
+    GROUP BY 
+        category, 
+        order_date
+), 
+sales_target AS (
+    SELECT 
+        category,
+        TO_CHAR(month_order_date, 'MM-YYYY') AS month_order_date,
+        target
+    FROM 
+        sales_target
+)
+SELECT 
+    ss.category,
+    ss.order_date, 
+    ss.total_sales AS total_sales_category_date,
+    st.month_order_date,
+    st.target, 
+    CASE 
+        WHEN ss.total_sales >= st.target THEN 'Yes'
+        ELSE 'No'
+    END AS target_met
+FROM 
+    sales_summary ss
+LEFT JOIN 
+    sales_target st ON ss.category = st.category 
+    AND ss.order_date = st.month_order_date
+ORDER BY 
+    ss.category,
+    ss.order_date;
+
+```
+
 ### Dashboarding & Data Visualization 
 I performed the following actions prior to creating the dashboard: 
 * Defined the users and their main objectives
