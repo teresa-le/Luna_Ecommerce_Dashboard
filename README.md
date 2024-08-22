@@ -73,7 +73,7 @@ ORDER BY
     Total_Sales DESC;
 ```
 
-Below is a snapshot of the results: <br> 
+Clothing makes up the largest percentage of sales, and furniture makes up the smallest. 
 <img src="https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/resources/Results%20Query%202.PNG"> 
 
 
@@ -127,6 +127,8 @@ ORDER BY
 	st.target;
 
 ```
+
+<img src="https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/resources/Results%20Query%203.PNG"> 
 
 Query: How months met the target? 
 
@@ -189,6 +191,7 @@ GROUP BY
 ``` 
 
 0 of the categories met the monthly sales targets. 
+<img src="https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/resources/Results%20Query%204.PNG">
 
 ### Dashboarding & Data Visualization 
 I performed the following actions prior to creating the dashboard: 
