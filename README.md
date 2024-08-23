@@ -126,6 +126,63 @@ ORDER BY
 
 <img src="https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/resources/Results%20Query%203.PNG"> 
 
+#### How many times were the targets and missed? 
+
+```
+WITH sales_summary AS (
+    SELECT 
+        category,
+        TO_CHAR(order_date, 'MM-YYYY') AS order_date,
+        SUM(amount) AS total_sales
+    FROM 
+        order_details
+    GROUP BY 
+        category, 
+        TO_CHAR(order_date, 'MM-YYYY')
+), 
+sales_target AS (
+    SELECT 
+        category,
+        TO_CHAR(month_order_date, 'MM-YYYY') AS month_order_date,
+        target
+    FROM 
+        sales_target
+),
+target_met_list AS (
+    SELECT 
+        ss.category,
+        ss.order_date, 
+        ss.total_sales AS total_sales_category_date,
+        st.month_order_date,
+        st.target, 
+        CASE 
+            WHEN ss.total_sales >= st.target THEN 'Yes'
+            ELSE 'No'
+        END AS target_met
+    FROM 
+        sales_summary ss
+    LEFT JOIN 
+        sales_target st ON ss.category = st.category 
+        AND ss.order_date = st.month_order_date
+)
+SELECT 
+    category,
+    target_met,
+	COUNT(*) AS count
+FROM
+    target_met_list
+GROUP BY
+    category,
+    target_met
+ORDER BY
+    category,
+    target_met;
+
+```
+
+Electronics met the monthly sales target most of the time whereas furniture and clothing missed the monthly sales target most of the time. 
+
+<img src="https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/resources/Results%20Query%204.PNG>
 
 ### Dashboarding & Data Visualization 
 I performed the following actions prior to creating the dashboard: 
@@ -145,9 +202,9 @@ I then created a dashboard based on the wireframe mockup, which initially didn't
 
 <img src="https://github.com/teresa-le/luna_ecommerce_dashboard/blob/main/resources/Dashboard%20Drilldowns.jpg">
 
-Luna sells three types of products: Electronics, furniture and clothing. In 2018 and 2019, electronics and furniture hit their sales targets. More information is needed to understand why clothing missed its sales targets and what can be done to help it meet its sales targets e.g. improved marketing efforts, price optimization, etc. Overall, all product categories are profitable with electronics being the most profitable type of product. Despite this fact, clothing makes up 2/3 of Luna's orders. 
+Luna sells three types of products: Electronics, furniture and clothing. On a monthly basis, only electronics hit their sales target most of the time whereas furniture missed its monthly sales target most of the time. On a yearly basis, both electronics and furniture hit their sales targets.  More information is needed to understand why clothing missed its sales targets and what can be done to help it meet its sales targets e.g. improved marketing efforts, price optimization, etc. Despite this, all product categories are profitable with electronics being the most profitable type of product. Clothing makes up 2/3rds of Luna's orders. 
 
-There is also potential room for growth by investing more to increase the sales of electronics, which appear to be more profitable. In the drilldowns, we can see that the two product subcategories that aren't producing a profit are electronics and tables. 45% or almost half of the sales on tables and chairs did not result in a profit so the cost of acquisition may be too high given their price points. It may be worthwhile to continue to sell chairs and tables depending on whether it aligns with the strategic goals of the business and can generate value long-term. 
+Based on this information, there is potential room for growth by investing more to increase the sales of electronics, which appear to be more profitable and is the one product category that hits most of its sales targets. In the drilldowns, we can see that the two product subcategories that aren't producing a profit are electronic games and tables. 45% or almost half of the sales on tables and chairs did not result in a profit so the cost of acquisition may be too high given their price points. It may be worthwhile to continue to sell chairs and tables depending on whether it aligns with the strategic goals of the business and can generate value long-term via e.g. the sale of other products like bookcases and printers, which are profitable. A market basket analysis should be conducted to see whether the sales or chairs & tables tend to also occur with the sales of profitable products to determine whether it's worthwhile to continue to sell them. 
 
 
 ## Usage 
