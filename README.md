@@ -182,7 +182,7 @@ ORDER BY
 
 Electronics met the monthly sales target most of the time whereas furniture and clothing missed the monthly sales target most of the time. 
 
-<img src="https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/resources/Results%20Query%203.PNG">
+<img src="https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/resources/Results%20Query%204.PNG">
 
 ### Dashboarding & Data Visualization 
 I performed the following actions prior to creating the dashboard: 
@@ -202,9 +202,9 @@ I then created a dashboard based on the wireframe mockup, which initially didn't
 
 <img src="https://github.com/teresa-le/luna_ecommerce_dashboard/blob/main/resources/Dashboard%20Drilldowns.jpg">
 
-Luna sells three types of products: Electronics, furniture and clothing. On a monthly basis, only electronics hit their sales target most of the time whereas furniture missed its monthly sales target most of the time. On a yearly basis, both electronics and furniture hit their sales targets.  More information is needed to understand why clothing missed its sales targets and what can be done to help it meet its sales targets e.g. improved marketing efforts, price optimization, etc. Despite this, all product categories are profitable with electronics being the most profitable type of product. Clothing makes up 2/3rds of Luna's orders. 
+Luna sells three types of products: Electronics, furniture and clothing. On a monthly basis, only electronics hit their sales target most of the time whereas furniture & clothing missed their monthly sales target most of the time. On a yearly basis, both electronics and furniture hit their sales targets.  More information is needed to understand why clothing missed its sales targets and what can be done to help it meet its sales targets e.g. improved marketing efforts, price optimization, etc. Despite this, all product categories are profitable with electronics being the most profitable type of product. Clothing makes up 2/3rds of Luna's orders. 
 
-Based on this information, there is potential room for growth by investing more to increase the sales of electronics, which appear to be more profitable and is the one product category that hits most of its sales targets. In the drilldowns, we can see that the two product subcategories that aren't producing a profit are electronic games and tables. 45% or almost half of the sales on tables and chairs did not result in a profit so the cost of acquisition may be too high given their price points. It may be worthwhile to continue to sell chairs and tables depending on whether it aligns with the strategic goals of the business and can generate value long-term via e.g. the sale of other products like bookcases and printers, which are profitable. A market basket analysis should be conducted to see whether the sales or chairs & tables tend to also occur with the sales of profitable products to determine whether it's worthwhile to continue to sell them. 
+Based on this information, there is potential room for growth by investing more to increase the sales of electronics, which appear to be more profitable and is the one product category that hits most of its sales targets. In the drilldowns, we can see that the two product subcategories that aren't producing a profit are electronic games and tables. 45% or almost half of the sales on tables and chairs did not result in a profit so the cost of acquisition may be too high or the products may not be priced high enough. It may be worthwhile to continue to sell chairs and tables depending on whether it aligns with the strategic goals of the business and can generate value long-term via e.g. the sale of other products like bookcases and printers, which are profitable. A market basket analysis should be conducted to see whether the sales of chairs & tables tend to also occur with the sales of profitable products to determine whether it's worthwhile to continue to sell them. 
 
 
 ## Usage 
