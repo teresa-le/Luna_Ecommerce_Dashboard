@@ -182,7 +182,7 @@ ORDER BY
 
 Electronics met the monthly sales target most of the time whereas furniture and clothing missed the monthly sales target most of the time. 
 
-<img src="https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/resources/Results%20Query%204.PNG>
+<img src="https://github.com/teresa-le/Luna_Ecommerce_Dashboard/blob/main/resources/Results%20Query%204.PNG">
 
 ### Dashboarding & Data Visualization 
 I performed the following actions prior to creating the dashboard: 
