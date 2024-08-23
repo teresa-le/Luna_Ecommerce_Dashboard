@@ -92,7 +92,7 @@ WITH sales_summary AS (
         order_details
     GROUP BY 
         category, 
-        order_date
+        TO_CHAR(order_date, 'MM-YYYY')
 ), 
 sales_target AS (
     SELECT 
@@ -105,7 +105,7 @@ sales_target AS (
 SELECT 
     ss.category,
     ss.order_date, 
-    SUM(ss.total_sales) AS total_sales_category_date,
+    ss.total_sales AS total_sales_category_date,
     st.month_order_date,
     st.target, 
     CASE 
@@ -117,16 +117,10 @@ FROM
 LEFT JOIN 
     sales_target st ON ss.category = st.category 
     AND ss.order_date = st.month_order_date
-GROUP BY 
-	ss.category, 
-	ss.order_date, 
-	st.month_order_date,
-	st.target,
-	target_met
 ORDER BY 
     ss.category,
     ss.order_date,
-	st.target;
+    st.target;
 
 ```
 
